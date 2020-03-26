@@ -134,6 +134,90 @@ namespace sol_cons_basis_csharp
 
 
 
+            // Logische structuren
+
+            Console.Write("Uw getal is ");
+            if (mijnRandom.Next(10) > 5)
+            {
+                Console.Write("groter dan ");
+            }
+            else
+            {
+                Console.Write("kleiner dan ");
+            }
+            Console.Write("vijf. Proficiat!");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            mijnInt = 0;
+            while (mijnInt < 10)
+            {
+                if (mijnInt == 4)
+                {
+                    mijnInt++;
+                    break;
+                }
+                Console.WriteLine(mijnInt);
+                mijnInt++;
+            }
+            //0 1 2 3   Bij de break gaat hij 'eruit'
+
+            mijnInt = 0;
+            while (mijnInt < 10)
+            {
+                if (mijnInt == 4)
+                {
+                    mijnInt++;
+                    continue;
+                }
+                Console.WriteLine(mijnInt);
+                mijnInt++;
+            }
+            //0 1 2 3    ...    5 6 7 8 9 'Bij continue gaat hij terug naar het begin'
+
+            mijnInt = 0;
+            do
+            {
+                Console.WriteLine(mijnInt);
+                mijnInt++;
+            }
+            while (mijnInt < 5);
+            //0 1 2 3 4
+
+            int day = 9;
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Looking forward to the Weekend.");
+                    break;
+            }
+            // Outputs "Thursday" (day 4)
+
 
 
 

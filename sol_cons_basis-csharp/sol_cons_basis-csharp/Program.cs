@@ -11,7 +11,7 @@ namespace sol_cons_basis_csharp
     {
         static void Main(string[] args)
         {
-            //Added in Left #Git exercise
+           
             //Datatypes
 
             bool mijnBool = false; // 1 bit, true of false

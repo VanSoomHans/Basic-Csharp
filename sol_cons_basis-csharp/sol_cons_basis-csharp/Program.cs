@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -302,6 +303,49 @@ namespace sol_cons_basis_csharp
 
 
 
+
+            //ARRAYS
+            //Maken, opsommen, toevoegen, wijzigen, verwijderen
+
+            string[] arrayFietsen; //Als je nog niet weet hoelang je array zal zijn.
+
+            arrayFietsen = new string[] { "koersfiets", "MTB", "Citybike" }; //Let op, als de array eenmaal een lengte heeft, kan deze niet 'zomaar' veranderd worden!
+            Console.WriteLine(arrayFietsen.Length);
+            arrayFietsen[1] = "test fiets"; //Zorgt voor wijziging van MTB naar test fiets
+
+            try
+            {
+                arrayFietsen[3] = "test fiets";
+                Console.Write(arrayFietsen.Length);
+            }
+            catch
+            {
+                Console.WriteLine("FOUTMELDING: arrayFietsen[3] = 'test fiets';" + Environment.NewLine + "Console.Write(arrayFietsen.Length);" + Environment.NewLine + "Bovenstaande werkt niet. Eerst een resize doen dan!");
+            }
+
+            //Nu gaat "test fiets" wel doen wat gevraagd is
+            Array.Resize(ref arrayFietsen, 4);
+            arrayFietsen[3] = "test fiets";
+            Console.WriteLine(arrayFietsen.Length);
+
+            foreach (string i in arrayFietsen)
+            {
+                Console.WriteLine(i);
+            }
+
+            //Een array sorteren 
+            Console.ReadLine();
+            Array.Sort(arrayFietsen);
+            foreach (string i in arrayFietsen)
+            {
+                Console.WriteLine(i);
+            }
+
+            //Een array met numbers
+            int[] myNumbers = { 5, 1, 8, 9 };
+            Console.WriteLine(myNumbers.Max());  // returns the largest value
+            Console.WriteLine(myNumbers.Min());  // returns the smallest value
+            Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
 
 
 

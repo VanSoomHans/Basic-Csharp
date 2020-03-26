@@ -218,7 +218,87 @@ namespace sol_cons_basis_csharp
             }
             // Outputs "Thursday" (day 4)
 
+          
+            
+            
+            /*BESTANDEN
+           •	Bestaat een bestand ?
 
+               LEZEN   
+               •	Alles in een keer lezen.
+               •	Lijn per lijn lezen.
+               •	Lijn per lijn maar deel van een lijn splitsen.
+
+               SCHRIJVEN
+
+           */
+            //Alles in een keer lezen.
+            Console.WriteLine("Lezen in 1 blok tekst om te 'displayen'");
+            Console.ReadLine();
+            // declaratie
+            //Using system.IO
+            if (System.IO.File.Exists("gegevens.txt"))
+            {
+                StreamReader leesobject = new StreamReader("gegevens.txt"); // dit wil zeggen, bestand bevind zich in de map debug
+                string inhoud = "";
+                //inhoud = leesobject.ReadLine();Leest enkel de eerste lijn, hier staat geen while not end of stream! Dus het stopt met lezen.
+                inhoud = leesobject.ReadToEnd();
+                // bestand sluitenn abders kunnen andere applicaties het niet gebruiken
+                leesobject.Close();
+                // inhoud neerschrijven op console
+                Console.Write(inhoud.ToUpper());
+            }
+            else
+            {
+                Console.WriteLine("Het bestand werd niet gevonden en kan dus niet worden ingelezen.");
+            }
+            Console.ReadLine();
+            Console.ReadLine();
+
+            Console.WriteLine("Lezen lijn per lijn om te 'displayen'");
+            Console.ReadLine();
+            string strgegeven;
+            string result = "";
+            StreamReader leesobject2 = new StreamReader("gegevens.txt");
+            while (!leesobject2.EndOfStream)
+            {
+                strgegeven = leesobject2.ReadLine();
+                Console.Write(strgegeven);
+                Console.Read();
+                result += strgegeven + Environment.NewLine;
+            }
+            leesobject2.Close();
+
+            Console.ReadLine();
+            Console.ReadLine();
+
+            Console.WriteLine("Lezen lijn per lijn EN opsplitsen om te 'displayen'");
+            Console.ReadLine();
+            string strvoornaam, strfamilienaam;
+            int intpositie;
+            StreamReader leesobject3 = new StreamReader("namen.txt");
+            while (leesobject3.Peek() != -1)
+            {
+                strgegeven = leesobject3.ReadLine();
+                intpositie = strgegeven.IndexOf(",");
+                strfamilienaam = strgegeven.Substring(0, intpositie);
+                strvoornaam = strgegeven.Substring(intpositie + 1);
+                Console.Write(strfamilienaam.PadLeft(15) + strvoornaam.PadLeft(15));
+                Console.ReadLine();
+            }
+            leesobject3.Close();
+
+            Console.ReadLine();
+            Console.ReadLine();
+
+
+            //SCHRIJVEN
+            using (StreamWriter writer = new StreamWriter("gegevens2.txt"))
+            {
+                writer.WriteLine(result);
+                Console.WriteLine("Uw bestand gegevens2.txt is weggeschreven.");
+
+            }
 
 
 

@@ -113,6 +113,29 @@ namespace sol_cons_basis_csharp
 
 
 
+            //Math klasse
+            Console.WriteLine(Math.Max(5, 10));     //Geeft het hoogste getal terug
+            Console.WriteLine(Math.Min(5, 10));     //Geeft het laagste getal terug
+            Console.WriteLine(Math.Sqrt(64));       //Geeft de vierkantwortel terug
+            Console.WriteLine(Math.Abs(-4.7));      //Geeft de absolute waarde terug
+            Console.WriteLine(Math.Round(9.99));    //Geeft de een afgerond getal terug
+            Console.WriteLine(Math.Pow(3, 2));      //Geeft het getal tot de macht x terug
+
+
+
+            //Random
+            Random mijnRandom = new Random();
+            Console.WriteLine(mijnRandom.Next());            //Geeft een random getal terug
+            Console.WriteLine(mijnRandom.Next(101));         //Geeft een getal terug tussen 0 en 100
+            Console.WriteLine(mijnRandom.Next(50, 101));      //Geeft een getal terug tussen 50 en 100
+            Console.WriteLine(mijnRandom.NextDouble());      //Geeft een double getal terug
+            Console.WriteLine((mijnRandom.NextDouble() * 5));  //Geeft een double getal terug tussen 0 en 5
+            Console.WriteLine((mijnRandom.NextDouble() * 5).ToString("0.00"));  //Geeft een double getal terug tussen 0 en 5 met 2 cijfers na de komma
+
+
+
+
+
 
 
 

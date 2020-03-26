@@ -19,60 +19,111 @@ namespace sol_cons_basis_csharp
             char mijnChar = 'D'; // 2 bytes: kan 1 letter behouden
             DateTime mijnDateTime = DateTime.Now; // 8bytes: Over datums... 
 
-             //// Date time now
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
-             //// Add days to datetime Now
-             //Console.WriteLine(DateTime.Now.AddDays(3).ToString("yyyy-MM-dd"));
-             //// Remove days from datetime Now
-             //Console.WriteLine(DateTime.Now.AddDays(-3).ToString("yyyy-MM-dd"));
-             //// Format Datetime in different formats and display them  
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
-             //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy HH:mm"));
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm tt"));
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy H:mm"));
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy h:mm tt"));
-             //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-             //Console.WriteLine(DateTime.Now.ToString("MMMM dd"));
-             //Console.WriteLine(DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK"));
-             //Console.WriteLine(DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’"));
-             //Console.WriteLine(DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss"));
-             //Console.WriteLine(DateTime.Now.ToString("hh:mm tt"));
-             //Console.WriteLine(DateTime.Now.ToString("H:mm"));
-             //Console.WriteLine(DateTime.Now.ToString("h:mm tt"));
-             //Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
-             //Console.WriteLine(DateTime.Now.ToString("yyyy MMMM"));
-             /*
-             01/13/2020
-             2020-01-16
-             2020-01-10
-             01/13/2020
-             Monday, 13 January 2020
-             Monday, 13 January 2020
-             Monday, 13 January 2020
-             Monday, 13 January 2020
-             Monday, 13 January 2020
-             Monday, 13 January 2020 10:57:34
-             01/13/2020 10:57
-             01/13/2020 10:57 AM
-             01/13/2020 10:57
-             01/13/2020 10:57 AM
-             01/13/2020 10:57:34
-             January 13
-             2020’-‘01’-‘13’T’10’:’57’:’34.3511433+00:00
-             Mon, 13 Jan 2020 10’:’57’:’34 ‘G1T’
-             2020’-‘01’-‘13’T’10’:’57’:’34
-             10:57 AM
-             10:57
-             10:57 AM
-             10:57:34
-             2020 January
-             */
+            //// Date time now
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
+            //// Add days to datetime Now
+            //Console.WriteLine(DateTime.Now.AddDays(3).ToString("yyyy-MM-dd"));
+            //// Remove days from datetime Now
+            //Console.WriteLine(DateTime.Now.AddDays(-3).ToString("yyyy-MM-dd"));
+            //// Format Datetime in different formats and display them  
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy"));  
+            //Console.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy HH:mm"));
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy hh:mm tt"));
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy H:mm"));
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy h:mm tt"));
+            //Console.WriteLine(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            //Console.WriteLine(DateTime.Now.ToString("MMMM dd"));
+            //Console.WriteLine(DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK"));
+            //Console.WriteLine(DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’"));
+            //Console.WriteLine(DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss"));
+            //Console.WriteLine(DateTime.Now.ToString("hh:mm tt"));
+            //Console.WriteLine(DateTime.Now.ToString("H:mm"));
+            //Console.WriteLine(DateTime.Now.ToString("h:mm tt"));
+            //Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+            //Console.WriteLine(DateTime.Now.ToString("yyyy MMMM"));
+            /*
+            01/13/2020
+            2020-01-16
+            2020-01-10
+            01/13/2020
+            Monday, 13 January 2020
+            Monday, 13 January 2020
+            Monday, 13 January 2020
+            Monday, 13 January 2020
+            Monday, 13 January 2020
+            Monday, 13 January 2020 10:57:34
+            01/13/2020 10:57
+            01/13/2020 10:57 AM
+            01/13/2020 10:57
+            01/13/2020 10:57 AM
+            01/13/2020 10:57:34
+            January 13
+            2020’-‘01’-‘13’T’10’:’57’:’34.3511433+00:00
+            Mon, 13 Jan 2020 10’:’57’:’34 ‘G1T’
+            2020’-‘01’-‘13’T’10’:’57’:’34
+            10:57 AM
+            10:57
+            10:57 AM
+            10:57:34
+            2020 January
+            */
+
+            
+            
+            
+            //Operatoren
+            /*
+             1. Arithmetic Operators
+
+            +Addition    Adds together two values        x + y
+            - Subtraction Subtracts one value from another x -y
+            * Multiplication  Multiplies two values x *y
+            / Division    Divides one value from another x / y
+            % Modulus Returns the division remainder          x % y
+            ++  Increment Increases the value of a variable by 1  x++
+            --  Decrement Decreases the value of a variable by 1  x--
+
+            2. Assignment Operators
+            +=	x += 3	x = x + 3	
+            -=	x -= 3	x = x - 3
+
+            3. Comparison Operators
+            ==	Equal to	x == y	
+            !=	Not equal	x != y	
+            >	Greater than	x > y	
+            <	Less than	x < y	
+            >=	Greater than or equal to	x >= y	
+            <=	Less than or equal to	x <= y
+
+            4. Logical Operators
+            && 	AND returns true als beide statements true zijn                                     x > 5 &&  x < 10	
+            || 	OR returns true als één van de twee statements true zijn	                        x < 5 || x > 4	
+            !	NOT, als het statement 'waar' is, moet je lezen als het NIET 'waar' is, dan true    !(x > 5 && x < 10)
+            */
+
+            mijnInt = 5;
+            mijnDouble = 2;
+            Console.WriteLine(mijnInt % mijnDouble); //5 / 2 = rest 1
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadLine();
+            Console.ReadLine();
+
 
         }
     }

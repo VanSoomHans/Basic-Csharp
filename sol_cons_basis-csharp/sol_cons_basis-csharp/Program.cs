@@ -11,6 +11,7 @@ namespace sol_cons_basis_csharp
     {
         static void Main(string[] args)
         {
+            //Ik schrijf hier een tekst om toe te voegen
             //Datatypes
 
             bool mijnBool = false; // 1 bit, true of false
@@ -277,6 +278,7 @@ namespace sol_cons_basis_csharp
             Console.ReadLine();
             string strvoornaam, strfamilienaam;
             int intpositie;
+
             StreamReader leesobject3 = new StreamReader("namen.txt");
             while (leesobject3.Peek() != -1)
             {

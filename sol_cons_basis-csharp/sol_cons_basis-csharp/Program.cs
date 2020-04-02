@@ -11,7 +11,6 @@ namespace sol_cons_basis_csharp
     {
         static void Main(string[] args)
         {
-            //Ik schrijf hier een tekst om toe te voegen
             //Datatypes
 
             bool mijnBool = false; // 1 bit, true of false
